@@ -24,7 +24,6 @@ public class InfoManager : MonoBehaviour
             }
         }
     }
-
     public void SetPlayeName()
     {
         playerName = NicknameInputFeiled.text;
