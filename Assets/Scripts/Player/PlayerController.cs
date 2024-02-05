@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer PlayerSpriteRenderer;
     PlayerState PlayerStateScript;
 
-
     //Events
     public event Action OnPrankEvent;
     public event Action GetCandyEvent;
@@ -40,8 +39,11 @@ public class PlayerController : MonoBehaviour
     //Player Move Input
     public void OnMove(InputAction.CallbackContext _context)
     {
-        PlayerMoveVelocity = _context.ReadValue<Vector2>();
-        FlipPlayerSprite(_context.ReadValue<Vector2>());
+        if(GameManager.Instance.eGameState == GAMESTATE.TRICK)
+        {
+            PlayerMoveVelocity = _context.ReadValue<Vector2>();
+            FlipPlayerSprite(_context.ReadValue<Vector2>());
+        }
     }
 
     //Flip Player Sprite

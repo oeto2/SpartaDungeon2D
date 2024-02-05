@@ -13,7 +13,8 @@ public class DropItem : MonoBehaviour
 
     public void OnDropItem()
     {
-        Instantiate(DrobItem, new Vector2(transform.position.x, transform.position.y + 1), Quaternion.identity);
+        if (GameManager.Instance.Player.GetComponent<PlayerState>().TriggerNpc)
+            Instantiate(DrobItem, new Vector2(transform.position.x, transform.position.y + 1), Quaternion.identity);
     }
 
 }

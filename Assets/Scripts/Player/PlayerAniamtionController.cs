@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class PlayerAniamtionController : MonoBehaviour
 {
-    Animator PlayerAnimator;
-
-    private void Awake()
-    {
-        PlayerAnimator = GetComponent<Animator>();
-    }
+    public Animator PlayerAnimator;
+    
     public void Start()
     {
         GameManager.Instance.Player.GetComponent<PlayerController>().OnPrankEvent += StartPlayerPrankAnimation;
