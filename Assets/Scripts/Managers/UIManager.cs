@@ -12,12 +12,19 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text JokeValueText;
     [SerializeField] private Text HpValueText;
     [SerializeField] private Text MissValueText;
+    [SerializeField] private Text CandyValueText;
 
     public static UIManager Instance;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        GameManager.Instance.Player.GetComponent<PlayerController>().GetCandyEvent += RefreshCandytext;
+        RefreshCandytext();
     }
 
     public void HideMainButtons()
@@ -57,5 +64,10 @@ public class UIManager : MonoBehaviour
         JokeValueText.text = _jokeValue.ToString();
         HpValueText.text = _hpValue.ToString();
         MissValueText.text = _missValue.ToString();
+    }
+
+    public void RefreshCandytext()
+    {
+        CandyValueText.text = GameManager.Instance.candyNum.ToString();
     }
 }

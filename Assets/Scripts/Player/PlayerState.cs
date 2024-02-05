@@ -20,12 +20,35 @@ public class State
     public void AddHp(int _value) => hp += _value;
     public void AddMiss(int _value) => miss += _value;
 }
-
-
 public class PlayerState : MonoBehaviour
 {
-    [SerializeField] private State PlayerState_ = new State(10, 100, 10);
+    public State PlayerState_ = new State(10, 100, 10);
     
+    [Header("PrankState")]
+    [SerializeField] private bool triggerNpc;
+    [SerializeField] float playerMoveSpeed;
+    [SerializeField] float playerPrankRate;
+
+
+    public float PlayerMoveSpeed
+    {
+        set { playerMoveSpeed = value; }
+        get { return playerMoveSpeed; }
+    }
+    
+    public float PlayerPrankRate
+    {
+        set { PlayerPrankRate = value; }
+        get { return playerPrankRate; }
+    }
+
+    //Property
+    public bool TriggerNpc
+    {
+        set { triggerNpc = value; }
+        get { return triggerNpc; }
+    }
+        
     private void Start()
     {
         //Refresh State Text
