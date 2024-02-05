@@ -380,7 +380,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 325987359}
-  - {fileID: 1717265289}
   m_Father: {fileID: 997087008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1321,6 +1320,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 734767736}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &213802587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,7 +1641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 275.00003}
+  m_AnchoredPosition: {x: 15, y: 274.99994}
   m_SizeDelta: {x: 632, y: 780}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &277520245
@@ -3885,6 +3896,7 @@ RectTransform:
   - {fileID: 1810699534}
   - {fileID: 382270159}
   - {fileID: 1870956230}
+  - {fileID: 1481915456}
   - {fileID: 832319853}
   m_Father: {fileID: 277520244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3913,6 +3925,8 @@ MonoBehaviour:
   HpValueText: {fileID: 382270160}
   MissValueText: {fileID: 1870956231}
   PriceText: {fileID: 1342328250}
+  BuyButton: {fileID: 832319854}
+  BuyButtonObject: {fileID: 832319852}
 --- !u!114 &584774497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4308,7 +4322,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 232200346}
-  - {fileID: 1149245615}
   m_Father: {fileID: 1978389679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4502,11 +4515,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2057991837}
-  m_Father: {fileID: 883221928}
+  m_Father: {fileID: 787412060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -154, y: 0}
+  m_AnchoredPosition: {x: 323.99997, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &728981593
@@ -4541,7 +4554,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 776729804}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.29487175}
+  m_AnchorMin: {x: 0, y: 0.2948718}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -5165,6 +5178,7 @@ RectTransform:
   - {fileID: 1560616802}
   - {fileID: 1775350683}
   - {fileID: 580117836}
+  - {fileID: 719380798}
   - {fileID: 883221928}
   m_Father: {fileID: 277520244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5231,6 +5245,8 @@ MonoBehaviour:
   HpValueText: {fileID: 1775350684}
   MissValueText: {fileID: 580117837}
   PriceText: {fileID: 306451147}
+  BuyButton: {fileID: 883221929}
+  BuyButtonObject: {fileID: 883221927}
 --- !u!1 &823220003
 GameObject:
   m_ObjectHideFlags: 0
@@ -5347,7 +5363,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1932647744}
-  - {fileID: 1481915456}
   m_Father: {fileID: 584774495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5469,7 +5484,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2107451571}
-  - {fileID: 719380798}
   m_Father: {fileID: 787412060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6293,6 +6307,7 @@ RectTransform:
   - {fileID: 1005831929}
   - {fileID: 1503596298}
   - {fileID: 1684367151}
+  - {fileID: 1717265289}
   - {fileID: 73004917}
   m_Father: {fileID: 277520244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6321,6 +6336,8 @@ MonoBehaviour:
   HpValueText: {fileID: 1503596299}
   MissValueText: {fileID: 1684367152}
   PriceText: {fileID: 1273727360}
+  BuyButton: {fileID: 73004918}
+  BuyButtonObject: {fileID: 73004916}
 --- !u!114 &997087010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7032,6 +7049,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f0456e0b61d9f0d4fa9a04ef9e9cdddb, type: 2}
   - {fileID: 11400000, guid: 65f54fb204dfc7245b386dcb9345a244, type: 2}
   - {fileID: 11400000, guid: 81133089353db884fbfea3a2aa00bd8a, type: 2}
+  BuyButtons: []
 --- !u!1 &1149245614
 GameObject:
   m_ObjectHideFlags: 0
@@ -7061,11 +7079,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 158930844}
-  m_Father: {fileID: 667285404}
+  m_Father: {fileID: 1978389679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -154, y: 0}
+  m_AnchoredPosition: {x: 323.99997, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1156503327
@@ -7660,8 +7678,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 728981595}
   m_HandleRect: {fileID: 728981594}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.70512825
+  m_Value: 1.0000002
+  m_Size: 0.7051282
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8526,11 +8544,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 314150910}
-  m_Father: {fileID: 832319853}
+  m_Father: {fileID: 584774495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -154, y: 0}
+  m_AnchoredPosition: {x: 323.99997, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1503596297
@@ -9081,11 +9099,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 561525902}
-  m_Father: {fileID: 73004917}
+  m_Father: {fileID: 997087008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -154, y: 0}
+  m_AnchoredPosition: {x: 323.99997, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1723984183
@@ -10567,6 +10585,7 @@ RectTransform:
   - {fileID: 392568617}
   - {fileID: 574670890}
   - {fileID: 1723984184}
+  - {fileID: 1149245615}
   - {fileID: 667285404}
   m_Father: {fileID: 277520244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10595,6 +10614,8 @@ MonoBehaviour:
   HpValueText: {fileID: 574670891}
   MissValueText: {fileID: 1723984185}
   PriceText: {fileID: 1938503296}
+  BuyButton: {fileID: 667285405}
+  BuyButtonObject: {fileID: 667285403}
 --- !u!114 &1978389681
 MonoBehaviour:
   m_ObjectHideFlags: 0

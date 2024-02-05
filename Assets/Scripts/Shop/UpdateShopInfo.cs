@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpdateShopInfo : MonoBehaviour
 {
     [SerializeField]private GameObject[] Slots;
     [SerializeField]private ItemData[] Items;
+    [SerializeField]private List<Button> BuyButtons;
 
     private void Start()
     {
@@ -27,7 +29,16 @@ public class UpdateShopInfo : MonoBehaviour
             shopSlotInfoScript.JokeValueText.text = $"장난력 : {Items[count].jokeValue}";
             shopSlotInfoScript.HpValueText.text = $"체력 : {Items[count].hpValue}";
             shopSlotInfoScript.MissValueText.text = $"회피율 : {Items[count].missValue}";
+
+            BuyButtons.Add(shopSlotInfoScript.BuyButton);
+            BuyButtons[count].onClick.AddListener(() => BuyItem(shopSlotInfoScript.indexNum));
             count++;
         }
     }
+
+    public void BuyItem(int _itemNum)
+    {
+        ShopSlotInfo shopSlotInfoScript = Slots[_itemNum].GetComponent<ShopSlotInfo>();
+        shopSlotInfoScript.HideButton();
+    } 
 }

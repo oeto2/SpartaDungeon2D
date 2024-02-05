@@ -13,4 +13,8 @@ public class ShopSlotInfo : MonoBehaviour
     public Text HpValueText;
     public Text MissValueText;
     public Text PriceText;
+    public Button BuyButton;
+    public GameObject BuyButtonObject;
+
+    public void HideButton() => BuyButtonObject.SetActive(false);
 }
