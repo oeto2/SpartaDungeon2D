@@ -25,7 +25,7 @@ public class State
 public class PlayerState : MonoBehaviour
 {
     [SerializeField] private State PlayerState_ = new State(10, 100, 10);
-
+    
     private void Start()
     {
         //Refresh State Text
