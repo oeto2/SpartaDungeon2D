@@ -12,6 +12,7 @@ public class ItemData : ScriptableObject
     public int jokeValue;
     public int hpValue;
     public int missValue;
+    public int price;
 }
 
 

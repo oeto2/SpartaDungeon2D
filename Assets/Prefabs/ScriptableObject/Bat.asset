@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9660dc2b0e91a364cb974953c02c1daf, type: 3}
-  m_Name: Pumpkin
+  m_Name: Bat
   m_EditorClassIdentifier: 
-  name: "\uD638\uBC15"
-  info: "\uC73C\uC2A4\uC2A4\uD55C \uD638\uBC15\uC774\uB2E4."
-  ItemImage: {fileID: 21300000, guid: c7522d4880442094787df211799b970d, type: 3}
-  jokeValue: 10
-  hpValue: 10
+  name: "\uBC15\uC950"
+  info: "\uB2A6\uC740 \uBC24 \uD65C\uB3D9\uD558\uB294 \uBC15\uC950\uC774\uB2E4."
+  ItemImage: {fileID: 21300000, guid: 8fa2860049c4f0046a196ce7ea55b9c0, type: 3}
+  jokeValue: 200
+  hpValue: 100
   missValue: 0
-  price: 100
+  price: 1000
