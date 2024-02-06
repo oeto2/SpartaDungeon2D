@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateShopInfo : MonoBehaviour
+public class ShopManager : MonoBehaviour
 {
     [SerializeField]private GameObject[] Slots;
     [SerializeField]private ItemData[] Items;
     [SerializeField]private List<Button> BuyButtons;
-
     private void Start()
     {
         RefreshShopInfo();
     }
-
     //Update Shop SlotDatas
     public void RefreshShopInfo()
     {
@@ -39,6 +37,21 @@ public class UpdateShopInfo : MonoBehaviour
     public void BuyItem(int _itemNum)
     {
         ShopSlotInfo shopSlotInfoScript = Slots[_itemNum].GetComponent<ShopSlotInfo>();
-        shopSlotInfoScript.HideButton();
+
+        if (GameManager.Instance.candyNum >= Items[_itemNum].price)
+        {
+            SystemMessageManager.Instance.SendSytemMessageText("아이템을 구매했습니다!");
+            GameManager.Instance.candyNum -= Items[_itemNum].price;
+            UIManager.Instance.RefreshCandytext();
+
+            //Add Item to Player Invetory
+            GameManager.Instance.Player.GetComponent<Inventory>().GetItem(Items[_itemNum]);
+            shopSlotInfoScript.HideButton();
+        }
+
+        else if (GameManager.Instance.candyNum < Items[_itemNum].price)
+        {
+            SystemMessageManager.Instance.SendSytemMessageText("캔디가 부족합니다!");
+        }
     } 
 }

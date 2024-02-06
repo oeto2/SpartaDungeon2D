@@ -70,4 +70,9 @@ public class UIManager : MonoBehaviour
     {
         CandyValueText.text = GameManager.Instance.candyNum.ToString();
     }
+
+    public void DD()
+    {
+        Debug.Log("dd");
+    }
 }
