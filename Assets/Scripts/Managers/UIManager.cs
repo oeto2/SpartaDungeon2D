@@ -9,10 +9,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject[] Buttons;
     [SerializeField] private GameObject[] MainBackGroundImage;
 
+    [SerializeField] private Text PlayerNameText;
     [SerializeField] private Text JokeValueText;
     [SerializeField] private Text HpValueText;
     [SerializeField] private Text MissValueText;
     [SerializeField] private Text CandyValueText;
+    [SerializeField] private Text PlayerLevelText;
+    [SerializeField] private Text PlayerExpText;
+    [SerializeField] private Slider PlayerExpSlider;
 
     public static UIManager Instance;
 
@@ -25,11 +29,15 @@ public class UIManager : MonoBehaviour
     {
         GameManager.Instance.Player.GetComponent<PlayerController>().GetCandyEvent += RefreshCandytext;
         RefreshCandytext();
+        RefreshExpSlide();
+
+        if (InfoManager.Instance != null)
+            PlayerNameText.text = InfoManager.Instance.NicknameInputFeiled.text;
     }
 
     public void HideMainButtons()
     {
-         foreach(GameObject btn in Buttons)
+        foreach (GameObject btn in Buttons)
         {
             btn.SetActive(false);
         }
@@ -59,20 +67,31 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void RefreshStateText(int _jokeValue, int _hpValue, int _missValue)
+    public void RefreshStateText()
     {
-        JokeValueText.text = _jokeValue.ToString();
-        HpValueText.text = _hpValue.ToString();
-        MissValueText.text = _missValue.ToString();
+        State playerState = GameManager.Instance.Player.GetComponent<PlayerState>().PlayerState_;
+
+        JokeValueText.text = playerState.joke.ToString();
+        HpValueText.text = playerState.hp.ToString();
+        MissValueText.text = playerState.miss.ToString();
+        PlayerLevelText.text = playerState.level.ToString();
     }
 
-    public void RefreshCandytext()
-    {
-        CandyValueText.text = GameManager.Instance.candyNum.ToString();
-    }
+    public void RefreshCandytext() => CandyValueText.text = GameManager.Instance.candyNum.ToString();
 
-    public void DD()
+    public void RefreshExpSlide()
     {
-        Debug.Log("dd");
+        State playerState = GameManager.Instance.Player.GetComponent<PlayerState>().PlayerState_;
+
+        if (playerState.curExp == 0)
+            PlayerExpSlider.value = 0;
+
+        else
+        {
+            PlayerExpSlider.value = (float)playerState.curExp / playerState.maxExp;
+            //Debug.Log((float)playerState.maxExp / playerState.curExp);
+        }
+
+        PlayerExpText.text = $"{playerState.curExp} / {playerState.maxExp}";
     }
 }

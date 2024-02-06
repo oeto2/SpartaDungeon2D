@@ -13,6 +13,7 @@ public class ItemData : ScriptableObject
     public int hpValue;
     public int missValue;
     public int price;
+    public bool isEquip;
 }
 
 

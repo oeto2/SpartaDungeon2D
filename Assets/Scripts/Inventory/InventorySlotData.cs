@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InvetorySlotData : MonoBehaviour
+public class InventorySlotData : MonoBehaviour
 {
     public int indexNum;
     public ItemData SlotItemData;
