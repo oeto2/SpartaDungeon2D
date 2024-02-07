@@ -1,7 +1,7 @@
 ## Tircik or treat!
 
 
-[![Title](https://github.com/oeto2/RogueDodge/assets/118743238/8e547c0c-56f0-47cf-83c4-c25838f9ccaf)](https://www.youtube.com/watch?v=c4ySjISqRx0&feature=youtu.be)
+![스크린샷 2024-02-07 103746](https://github.com/oeto2/SpartaDungeon2D/assets/118743238/7febdae1-972f-4828-accc-1c61e91fe320)
 
 
 ## 🙋‍♀️ 개요
